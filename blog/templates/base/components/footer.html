@@ -1,0 +1,43 @@
+<div class="footer py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3 class="text-light">Diller</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            {% for item in categories %}
+              <a href="{{item.slug}}">{{ item.title }}</a>
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <form class="form-inline">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="ebulten" class="sr-only">E-Bulten</label>
+            <input type="email" class="form-control" id="ebulten" placeholder="mail adresin" />
+          </div>
+          <button type="submit" class="btn btn-dark mb-2">BülteneKaydol</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row border-top mb-3"></div>
+    <div class="row ">
+      {% for item in pages %}
+        <div class="col-2">
+          <h5 class="text-light">{{item.title}}</h5>
+          <ul class="list-unstyled">
+            {% for item in categories %}
+              {% if item.gender == 'Men' or item.gender == 'Unisex' %}
+                <li class="list-item">
+                  <a class="list-item" href="">{{ item.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

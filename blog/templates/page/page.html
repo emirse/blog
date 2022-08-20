@@ -1,0 +1,20 @@
+{% extends 'base/base.html'%}
+
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            {% for item in items%}
+            <h2>{{item.title}}</h2>
+            {% if item.cover_image %}
+            <img src="{{item.cover_image.url}}" alt="{{item.title}}" class="w-100">
+            {% endif%}
+            <p>{{item.content}}</p>
+               {%endfor%}
+        </div>
+    </div>
+</div>
+
+{% endblock%}

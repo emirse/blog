@@ -1,0 +1,18 @@
+{%extends 'base/base.html'%}
+
+{% block content %}
+
+{%include 'home/carousel.html'%}
+
+<div class="container mt-5">
+    <div class="row">
+        {% for item in items%}
+        {% if item.cover_image%}
+        <div class="col-sm-3">{% include 'topic/category_topic.html'%}</div>
+        {% endif%}
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}
+
+

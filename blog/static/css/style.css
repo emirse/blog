@@ -1,0 +1,22 @@
+.navbar a {
+    color: #ED7227;
+    font-size: large !important;
+}
+
+a:hover {
+    color: #ED0000;
+}
+
+.footer {
+    background: #ED7227;
+}
+
+.footer a {
+    color: white;
+}
+.card-img-top {
+    width: 100%;
+    height: 20vh;
+    object-fit: contain;
+    }
+

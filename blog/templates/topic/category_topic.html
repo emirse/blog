@@ -1,0 +1,15 @@
+{% load humanize %}
+
+<div class="card mb-3">
+  {% if item.cover_image %}
+    <img src="{{ item.cover_image.url }}" alt="Card image" class="w-100 card-img-top" />
+  {% endif %}
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title }}</h5>
+    <p class="card-text">{{ item.about}}</p>
+    <p class="card-text"><small class="text-muted">{{ item.created_at|timesince}} created</small></p>
+
+    <a href="{% url 'show_item' category_item_slug=item.slug %}" class="card-link btn btn-primary float-left">Read More...</a>
+  </div>
+</div>
+
